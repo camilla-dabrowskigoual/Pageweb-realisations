@@ -4,14 +4,13 @@ background-image: url(images/il_1588xN.7644876502_gygk.webp);
 background-size: cover;
 background-position:center;
 background-repeat: no-repeat;
-background-attachment: fixed;
+background-attachment: fixed; /*L'image du fond ne se déplace pas*/
 margin:0;
 padding:0;
 }
 
 header{
-    width: 75%;
-    margin : 0% auto;  /*Permet de centrer le header*/
+    margin: 0 12.5%  /*Permet de commencer le header à 12,5% à gauche au même niveau que la grid*/
 }
 
 
@@ -93,9 +92,8 @@ nav a:hover::before {
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr; /*Permet de mettre une image sur deux qui a une largeur différente*/
     grid-template-rows: repeat(3, 200px);
     gap: 8px; /*Espace entre chaque élement de la grid*/
-    width : 75%;
     max-height: 900px;
-    margin: 0% auto; /*Centre la grid dans body horizontalement*/
+    margin: 0 12.5%; /*Commence la grid à 12,5% à gauche*/
 }
     
 .parent img {
