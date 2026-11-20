@@ -7,11 +7,14 @@ h1{
 }
 
 
+
 .parent {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+    grid-template-rows: repeat(3, 200px);
     gap: 8px;
+    max-width: 1000px;
+    max-height: 900px;
 }
     
 .parent img {
@@ -19,49 +22,6 @@ h1{
     height: 100%;
     object-fit: cover;
 }
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 150px);
-    gap: 8px;
-}
-
-
-
-
-
-.div7 {
-    grid-column-start: 6;
-    grid-row-start: 2;
-}
-
-.div8 {
-    grid-column-start: 1;
-    grid-row-start: 2;
-}
-
-.div9 {
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
-
-.div10 {
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
-
-.div11 {
-    grid-column-start: 4;
-    grid-row-start: 2;
-}
-
-.div12 {
-    grid-column-start: 5;
-    grid-row-start: 2;
-}
-
-
 
 
 
