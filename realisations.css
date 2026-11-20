@@ -1,3 +1,4 @@
+/*Mise en forme du corps de la page : image en fond, marge...*/
 body{
 background-image: url(images/il_1588xN.7644876502_gygk.webp);
 background-size: cover;
@@ -10,56 +11,11 @@ padding:0;
 
 header{
     width: 75%;
-    margin : 0% auto;
+    margin : 0% auto;  /*Permet de centrer le header*/
 }
 
-.main img{
-    width: 170px;
-    height: auto;
-    top : 80px;
-    left: 0px;
-    position: absolute;
-}
 
-nav a{
-    font-style: oblique;
-    color:darkcyan ;
-    text-decoration: none;
-    font-size: 19px;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(143, 142, 142, 0.301);
-    transition: text-shadow 0.3s ease;
-
-}
-
-nav a:hover{
- text-shadow: 2px 2px 4px rgba(143, 142, 142, 0.563);
- font-size: 21px;
-
-}
-
-nav a::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background-color: rgb(226, 189, 141);
-    transition: width 0.3s ease;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
-nav{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: fixed;
-    top : 280px;
-    left : 20px;
-}
-
+/*Mise en forme du titre*/
 h1{
     font-family:'Cormorant Garamond', serif;
     font-size: 50px;
@@ -67,24 +23,76 @@ h1{
     margin-top: 20px;
 }
 
+/*Ajout d'une barre sous le titre avec ::after*/
 h1::after {
     content: " ";
     background-color: darkcyan;
     width: 120px;
     height: 4px;
-    display: block;
+    display: block; /*Permet d'afficher la peite barre*/
     margin-top: 8px;
 }
 
+/*Effet quand on psurvole le titre avec la souris*/
 h1:hover {
     color: rgb(170, 77, 116);
 }
 
+/*Mise en page du logo BloomPetals*/
+.main img{
+    width: 170px; /*Largeur du logo*/
+    height: auto;
+    top : 80px; /*80px sépare le titre du haut de la page*/
+    left: 0px;
+    position: absolute; /*Permet de ne pas pousser les autres élements vers le bas*/
+}
+
+nav{
+    display: flex;
+    flex-direction: column; /*Permet de mettre les élements en colonne*/
+    gap: 20px; /*Espace entre chaque élement*/
+    position: fixed; /* Permet de garder les liens toujours au même endroit*/
+    top : 280px; /*Ecart du haut de la page*/
+    left : 20px; /*Ecart de la gauche de la page*/
+}
+
+nav a{
+    font-style: oblique; /*Permet de mettre les liens en italique*/
+    color:darkcyan ;
+    text-decoration: none; /*Suppression des lignes sous les liens*/
+    font-size: 19px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(143, 142, 142, 0.301); /*Ajout d'un effet ombré*/
+    transition: text-shadow 0.3s ease; /*Fait apparaître et disparaître progressivement l'ombre avec le hover*/
+}
+
+/*Ajout d'effet quand on survole les liens avec la souris*/
+nav a:hover{
+ text-shadow: 2px 2px 4px rgba(143, 142, 142, 0.563);
+ font-size: 21px;
+}
+
+/*Ajout d'une ligne au-dessus des liens*/
+nav a::before {
+    content: "";
+    display: block; /*Fait apparaître la ligne*/
+    width: 0;
+    height: 3px;
+    background-color: rgb(226, 189, 141);
+    transition: width 0.3s ease; /*Permet leur apparition progressive*/
+}
+
+/*Ajout d'un effet de la ligne quand on survole les liens avec la souris*/
+nav a:hover::before {
+    width: 100%; /*Permet l'apparition de la ligne quand on la survole*/
+}
+
+/*Grid*/
 .parent {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr; /*Permet de mettre une image sur deux qui a une largeur différente*/
     grid-template-rows: repeat(3, 200px);
-    gap: 8px;
+    gap: 8px; /*Espace entre chaque élement de la grid*/
     width : 75%;
     max-height: 900px;
     margin: 0% auto;
@@ -100,16 +108,11 @@ h1:hover {
 
 .parent img:hover {
     transform: scale(1.1);
-
 }
 
 .parent div{
-    overflow: hidden;
-    border-radius: 7px;
-}
-
-.div3 img{
-object-position: center;
+    overflow: hidden; /*Permet à ce que les bords de l'image (du contenant) ne se déforment pas*/
+    border-radius: 7px; /*Arrondit les bords des images*/
 }
 
 /* Pied de page gris selon la maquette */
@@ -117,10 +120,10 @@ footer {
     background-color: #797D87;
     height: 50px;
     margin-top: 40px;
-    /*On ajoute un margin pour avoir un espace beige entre la page blanche et le pied de page gris*/
+    /*On ajoute un margin pour avoir un espace entre la grid et le pied de page gris*/
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: end; /*Les élements se situent en bas du pied de page gris*/
     justify-content: space-around;
 }
 
@@ -130,13 +133,13 @@ footer a {
     color: white;
     font-weight: bold;
     text-decoration: none;
-    transform: translateY(-3px);
+    transform: translateY(-3px); /*Permet de monter de 3px les élements du bas de la page*/
 }
 
 /*Mise en forme des liens quand on passe dessus avec la souris*/
 footer a:hover {
     text-decoration: none;
-    text-decoration: overline;
+    text-decoration: overline; /*Ajout d'une ligne au-dessus de chaque élement*/
 }
 
 
