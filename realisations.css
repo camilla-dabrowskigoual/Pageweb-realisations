@@ -22,6 +22,11 @@ h1{
     margin-top: 20px;
 }
 
+/*Couleur de "réalisations"*/
+.title{
+    color: rgb(167, 57, 103);
+}
+
 /*Ajout d'une barre sous le titre avec ::after*/
 h1::after {
     content: " ";
@@ -34,7 +39,11 @@ h1::after {
 
 /*Effet quand on survole le titre avec la souris*/
 h1:hover {
-    color: rgb(170, 77, 116);
+    color: rgb(188, 125, 61);
+}
+
+h1:hover .title {
+    color: rgb(188, 125, 61);
 }
 
 /*Mise en page du logo BloomPetals*/
