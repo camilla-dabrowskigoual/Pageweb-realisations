@@ -11,6 +11,45 @@ header{
     margin : 0% auto;
 }
 
+nav a{
+    font-style: oblique;
+    color:darkcyan ;
+    text-decoration: none;
+    font-size: 19px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(143, 142, 142, 0.301);
+    transition: text-shadow 0.3s ease;
+
+}
+
+nav a:hover{
+ text-shadow: 2px 2px 4px rgba(143, 142, 142, 0.563);
+ font-size: 21px;
+
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: rgb(226, 189, 141);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top : 300px;
+    left : 20px;
+}
+
 h1{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
