@@ -1,5 +1,14 @@
 body{
-background-color:rgb(248, 207, 240) ;
+background-image: url(images/il_1588xN.7644876502_gygk.webp);
+background-size: cover;
+background-position:center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+header{
+    width: 75%;
+    margin : 0% auto;
 }
 
 h1{
@@ -19,17 +28,14 @@ h1:hover {
     color: rgb(170, 77, 116);
 }
 
-
-
 .parent {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
     grid-template-rows: repeat(3, 200px);
     gap: 8px;
-    max-width: 1000px;
+    width : 75%;
     max-height: 900px;
-    margin : 0 auto;
-    padding: 30px;
+    margin: 0% auto;
 }
     
 .parent img {
@@ -37,6 +43,7 @@ h1:hover {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    border-radius: 7px;
 }
 
 .parent img:hover {
@@ -46,6 +53,11 @@ h1:hover {
 
 .parent div{
     overflow: hidden;
+    border-radius: 7px;
+}
+
+.div3 img{
+object-position: center;
 }
 
 
